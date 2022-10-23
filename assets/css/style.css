@@ -8,13 +8,14 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    font-weight:300;
+    font-weight: 300;
     color: #3a3a3a;
 }
 
 /* headings and logo */
 
-h1, h2 {
+h1,
+h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -33,7 +34,8 @@ h1, h2 {
     letter-spacing: 4px;
 }
 
-#menu, #logo {
+#menu,
+#logo {
     line-height: 75px;
 }
 
@@ -58,8 +60,32 @@ h1, h2 {
 
 /* hero image */
 
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
 #hero-image {
     height: 600px;
     width: 100%;
     background: url('../images/hero-image.webp') no-repeat center center;
+
+    /* animates zoom effect on loadinmg page */
+
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creates the level of zoom for the hero image */
+
+@keyframes hero-zoom {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.1)
+    }
 }
